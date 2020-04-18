@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+
+.Title {
+	width: 400px;
+	height: 500px;
+	text-align: center;
+}
+
+.Body {
+	width: 400px;
+	height: 500px;
+	text-align: center;
+	float: left;
+}
+
+.Body-text {
+	text-align: center;
+
+}
