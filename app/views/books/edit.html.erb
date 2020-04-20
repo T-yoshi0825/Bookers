@@ -2,6 +2,12 @@
 <% if @book.errors.any? %>
 
   <div class="alert alert-warning">
+    <% if @book && @book.errors.any? %>
+     <%= @book.errors.count %>errors prohibited this obj flom being save:<br>
+     <% @book.errors.full_messages.each do |massage| %>
+     <%= massage %>
+   <% end %>
+  <% end %>
 
     <ul>
       <% @book.errors.full_messages.each do |message| %>
@@ -21,8 +27,8 @@
     <h4>Body</h4>
     <%= book.text_area :body %>
   <section>
-  	<%= book.submit '保存' %>
+  	<%= book.submit 'Update Book' %>
   </section>
   <%=link_to'show',book_path %>
-  <%=link_to'back',book_path %>
+  <%=link_to'back',books_path %>
 <% end %>
